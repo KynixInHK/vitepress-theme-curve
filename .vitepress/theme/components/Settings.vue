@@ -3,20 +3,20 @@
   <div class="settings">
     <div class="set-btn s-card" @click="store.changeShowStatus('showSeetings')">
       <i class="iconfont icon-style"></i>
-      <span class="set-text">个性化配置</span>
+      <span class="set-text">客製化</span>
     </div>
     <!-- 设置面板 -->
     <Modal
       :show="store.showSeetings"
-      title="个性化配置"
+      title="客製化"
       titleIcon="style"
       @mask-click="store.changeShowStatus('showSeetings')"
       @modal-close="store.changeShowStatus('showSeetings')"
     >
       <div class="set-list">
-        <span class="title">字体</span>
+        <span class="title">字體</span>
         <div class="set-item">
-          <span class="set-label">全站字体</span>
+          <span class="set-label">全站字體</span>
           <div class="set-options">
             <span
               :class="['options', { choose: fontFamily === 'hmos' }]"
@@ -28,55 +28,55 @@
               :class="['options', { choose: fontFamily === 'lxgw' }]"
               @click="fontFamily = 'lxgw'"
             >
-              霞鹜文楷
+              霞鶩文楷
             </span>
           </div>
         </div>
         <div class="set-item">
-          <span class="set-label">全站字体大小</span>
+          <span class="set-label">全站字體大小</span>
           <div class="set-options">
             <span class="options" @click="store.changeFontSize(false)"> - </span>
             <span class="num">{{ fontSize }}</span>
             <span class="options" @click="store.changeFontSize(true)"> + </span>
           </div>
         </div>
-        <span class="title">壁纸个性化</span>
+        <span class="title">背景圖片客製化</span>
         <div class="set-item">
-          <span class="set-label">全站背景</span>
+          <span class="set-label">全站背景圖片</span>
           <div class="set-options">
             <span
               :class="['options', { choose: backgroundType === 'close' }]"
               @click="backgroundType = 'close'"
             >
-              关闭
+              關閉
             </span>
             <span
               :class="['options', { choose: backgroundType === 'patterns' }]"
               @click="backgroundType = 'patterns'"
             >
-              纹理
+              紋理
             </span>
             <span
               :class="['options', { choose: backgroundType === 'image' }]"
               @click="(backgroundType = 'image'), (themeType = 'dark')"
             >
-              图片
+              圖片
             </span>
           </div>
         </div>
         <div v-if="backgroundType === 'image'" class="set-item">
-          <span class="set-label">背景图片地址</span>
+          <span class="set-label">背景圖片位址</span>
           <div class="set-options">
             <input
               v-model="backgroundUrl"
               type="url"
               pattern="https?://.+"
-              title="请输入有效的网址，例如：http://www.example.com"
+              title="請輸入有效的URL，例如：http://www.example.com"
               required
             />
           </div>
         </div>
-        <span class="title">首页样式</span>
+        <span class="title">首頁樣式</span>
         <div class="set-item">
           <span class="set-label">Banner 高度</span>
           <div class="set-options">
@@ -84,25 +84,25 @@
               :class="['options', { choose: bannerType === 'half' }]"
               @click="bannerType = 'half'"
             >
-              半屏
+              半螢幕
             </span>
             <span
               :class="['options', { choose: bannerType === 'full' }]"
               @click="bannerType = 'full'"
             >
-              全屏
+              全螢幕
             </span>
           </div>
         </div>
-        <span class="title">杂项调整</span>
+        <span class="title">雜項</span>
         <div class="set-item">
-          <span class="set-label">额外信息显示位置</span>
+          <span class="set-label">其他資訊顯示位置</span>
           <div class="set-options">
             <span
               :class="['options', { choose: infoPosition === 'normal' }]"
               @click="infoPosition = 'normal'"
             >
-              默认位置
+              預設位置
             </span>
             <span
               :class="['options', { choose: infoPosition === 'fixed' }]"

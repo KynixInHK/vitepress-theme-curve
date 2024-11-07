@@ -4,6 +4,7 @@ import { routeChange } from "@/utils/initTools.mjs";
 import { enhanceAppWithTabs } from "vitepress-plugin-tabs/client";
 import LazyLoader from "@/components/LazyLoader.vue";
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
+import Vue3Spinner from "vue3-spinner"
 
 // 根组件
 import App from "@/App.vue";
@@ -27,6 +28,7 @@ const Theme = {
     // 挂载
     app.use(pinia);
     app.use(InstantSearch);
+    app.use(Vue3Spinner);
     app.component("LazyLoader", LazyLoader);
     // 插件
     enhanceAppWithTabs(app);

@@ -8,7 +8,7 @@ export const getTimeRemaining = () => {
   const now = dayjs();
   const dayText = {
     day: "今日",
-    week: "本周",
+    week: "本週",
     month: "本月",
     year: "本年",
   };

@@ -3,7 +3,7 @@
     <div class="not-found-content">
       <h1 class="title">404</h1>
       <span class="title-tip">Page not found</span>
-      <button class="to-home" @click="router.go('/')">回到主页</button>
+      <button class="to-home" @click="router.go('/')">回到主頁</button>
     </div>
   </div>
 </template>

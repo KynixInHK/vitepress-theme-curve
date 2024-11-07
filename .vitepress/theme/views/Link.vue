@@ -2,33 +2,19 @@
 <template>
   <div class="link">
     <!-- 顶图 -->
-    <Banner type="page" title="友情链接" desc="与各位博主无限进步">
+    <Banner type="page" title="友情鏈接" desc="互相交流，共同進步">
       <template v-slot:header-slot>
         <div class="menu">
           <div class="menu-item random" @click="randomJump">
             <i class="iconfont icon-shuffle" />
-            <span class="name">随机访问</span>
+            <span class="name">隨機造訪</span>
           </div>
-          <div class="menu-item add" @click="smoothScrolling('#友情链接申请')">
+          <div class="menu-item add" @click="toLink">
             <i class="iconfont icon-right-round" />
-            <span class="name">申请友链</span>
+            <span class="name">申請友鏈</span>
           </div>
         </div>
       </template>
-      <!-- <div class="link-group">
-        <div v-for="(link, index) in pairedLinks(allLinkData)" :key="index" class="link-group-item">
-          <a v-for="(item, i) in link" :key="i" :href="item.url" class="link-logo">
-            <LazyLoader>
-              <img
-                :src="item.avatar"
-                :alt="item.name"
-                class="link-logo-img"
-                @load="(e) => e.target.classList.add('loaded')"
-              />
-            </LazyLoader>
-          </a>
-        </div>
-      </div> -->
     </Banner>
     <!-- 友链数据 -->
     <LinkList :listData="linkData" :useFriendsLink="true" />
@@ -38,6 +24,12 @@
 <script setup>
 import { smoothScrolling } from "@/utils/helper";
 import linkData from "@/assets/linkData.mjs";
+import { useRouter } from "vitepress";
+
+const router = useRouter()
+const toLink = () => {
+  router.go('/pages/link')
+}
 
 // 全部友链
 const allLinkData = computed(() => {
@@ -50,7 +42,7 @@ const randomJump = () => {
     const friendList = allLinkData.value;
     const randomList = friendList[Math.floor(Math.random() * friendList.length)];
     $message.warning(
-      `您即将前往 ${randomList?.name}，请注意链接是否安全`,
+      `您即將前往 ${randomList?.name}，請注意鏈接是否安全`,
       {
         close: true,
         duration: 2000,
@@ -60,8 +52,8 @@ const randomJump = () => {
       },
     );
   } catch (error) {
-    console.error("友链随机访问时出错：", error);
-    $message.error("友链随机访问时出错，请重试");
+    console.error("友鏈隨機訪問時出錯：", error);
+    $message.error("友鏈隨機訪問時出錯，請重試");
   }
 };
 </script>

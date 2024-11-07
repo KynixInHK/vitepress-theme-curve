@@ -21,7 +21,7 @@ export const calculateScroll = throttle(
         direction: scrollDirection,
       };
     } catch (error) {
-      console.error("计算滚动时出现错误：", error);
+      console.error("計算滾動時出錯：", error);
     }
   },
   300,
@@ -54,7 +54,7 @@ export const smoothScrolling = (target = 0) => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   } catch (error) {
-    console.error("平滑滚动出错：", error);
+    console.error("平滑過渡出錯：", error);
   }
 };
 
@@ -79,7 +79,7 @@ export const formatTimestamp = (timestamp) => {
   } else {
     let difference = Math.floor((today - targetDate) / (1000 * 60 * 60 * 24));
     if (difference <= 0) {
-      return "今日内";
+      return "今日內";
     } else if (difference < 7) {
       return `${difference}天前`;
     } else {
@@ -137,10 +137,10 @@ export const copyText = async (data) => {
   if (navigator.clipboard) {
     try {
       await navigator.clipboard.writeText(data);
-      $message.success("复制成功，在转载时请标注本文地址");
+      $message.success("拷貝成功，在轉載時請註明");
     } catch (error) {
-      console.error("复制出错：", error);
-      $message.error("复制出现错误，请重试");
+      console.error("拷貝出錯：", error);
+      $message.error("拷貝出現錯誤，請重試");
     }
   } else {
     // 如果浏览器不支持 navigator.clipboard
@@ -150,10 +150,10 @@ export const copyText = async (data) => {
     textArea.select();
     try {
       document.execCommand("copy");
-      $message.success("复制成功，在转载时请标注本文地址");
+      $message.success("拷貝成功，轉載時請註明");
     } catch (err) {
-      console.error("复制出错：", err);
-      $message.error("复制出现错误，请重试");
+      console.error("拷貝出錯：", err);
+      $message.error("拷貝出現錯誤，請重試");
     } finally {
       document.body.removeChild(textArea);
     }
@@ -166,7 +166,7 @@ export const copyText = async (data) => {
  */
 export const copyImage = async (imageURL) => {
   if (!navigator.clipboard) {
-    console.error("浏览器不支持 Clipboard API");
+    console.error("瀏覽器不支援 Clipboard API");
     return;
   }
   try {
@@ -177,11 +177,11 @@ export const copyImage = async (imageURL) => {
         [blob.type]: blob,
       }),
     ]);
-    console.log("图片已复制到剪贴板");
-    $message.success("图片已复制到剪贴板");
+    console.log("圖片已拷貝到剪貼簿");
+    $message.success("圖片已拷貝到剪貼簿");
   } catch (error) {
-    console.error("复制图片出错：", error);
-    $message.error("复制图片错误，请重试");
+    console.error("拷貝圖片出錯：", error);
+    $message.error("拷貝圖片出錯，請重試");
   }
 };
 
@@ -204,8 +204,8 @@ export const downloadImage = (imageUrl) => {
     anchor.click();
     document.body.removeChild(anchor);
   } catch (error) {
-    console.error("下载图片出错：", error);
-    $message.error("下载图片错误，请重试");
+    console.error("下載圖片出錯：", error);
+    $message.error("下載圖片出錯，請重試");
   }
 };
 
@@ -217,21 +217,21 @@ export const getGreetings = () => {
   const hour = new Date().getHours();
   let hello;
   if (hour < 6) {
-    hello = "凌晨好，昨晚睡得怎么样？";
+    hello = "凌晨好，昨晚休息如何？";
   } else if (hour < 9) {
-    hello = "早上好，今天也要开心哦！";
+    hello = "早上好，今天也要開心喔！";
   } else if (hour < 12) {
-    hello = "上午好，今天也要加油哦！";
+    hello = "上午好，今天也要加油喔！";
   } else if (hour < 14) {
-    hello = "中午好，吃饱了精神好！";
+    hello = "中午好，吃飽了精神好！";
   } else if (hour < 17) {
-    hello = "下午好，继续加油！";
+    hello = "下午好，繼續加油！";
   } else if (hour < 19) {
-    hello = "傍晚好，是时候放松一下了！";
+    hello = "傍晚好，是時候放鬆一下了！";
   } else if (hour < 22) {
-    hello = "晚上好，是时候休息了！";
+    hello = "晚上好，是時候休息了！";
   } else {
-    hello = "夜深了，明天继续加油！";
+    hello = "夜深了，早點休息喔！";
   }
   return hello;
 };
@@ -249,11 +249,8 @@ export const shuffleArray = (array) => {
 // 特殊纪念日置灰
 export const specialDayGray = () => {
   const specialDays = [
-    { date: "4-4", name: "清明节" },
-    { date: "5-12", name: "汶川大地震纪念日" },
-    { date: "7-7", name: "中国人民抗日战争纪念日" },
-    { date: "9-18", name: "九·一八事变纪念日" },
-    { date: "12-13", name: "南京大屠杀死难者国家公祭日" },
+    { date: "9-18", name: "九·一八事變紀念日" },
+    { date: "12-13", name: "南京大屠殺死難者國家公祭日" },
   ];
   // 获取当天日期
   const today = new Date();

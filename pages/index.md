@@ -1,5 +1,5 @@
 ---
-title: 正在重定向
+title: 正在重新定向
 ---
 
 <script setup>

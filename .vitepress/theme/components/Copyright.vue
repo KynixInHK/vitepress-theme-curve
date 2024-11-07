@@ -12,15 +12,15 @@
         <span class="name">{{ theme.siteMeta.author.name }}</span>
       </div>
       <div class="meta-item">
-        <span class="tip">发布于</span>
+        <span class="tip">發佈於</span>
         <span class="name">{{ formatTimestamp(postData?.date) }}</span>
       </div>
       <div class="meta-item">
-        <span class="tip">更新于</span>
+        <span class="tip">更新於</span>
         <span class="name">{{ formatTimestamp(postData?.lastModified) }}</span>
       </div>
       <div class="meta-item cc">
-        <span class="tip">许可协议</span>
+        <span class="tip">許可協議</span>
         <a
           class="name"
           href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"
@@ -30,7 +30,7 @@
         </a>
       </div>
     </div>
-    <span class="meta-tip">署名-非商业性使用-相同方式共享 4.0 国际</span>
+    <span class="meta-tip">署名-非商業性使用-相同方式共享 4.0 國際</span>
   </div>
 </template>
 

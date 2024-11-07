@@ -85,7 +85,7 @@ export const mainStore = defineStore("main", {
     changeThemeType() {
       // 禁止壁纸模式切换
       if (this.backgroundType === "image") {
-        $message.warning("无法在壁纸模式下切换明暗模式", {
+        $message.warning("無法在壁紙模式下切換明暗模式", {
           duration: 1500,
         });
         return false;
@@ -99,11 +99,11 @@ export const mainStore = defineStore("main", {
       if (typeof $message !== "undefined") {
         const text =
           this.themeType === "light"
-            ? "浅色模式"
+            ? "淺色模式"
             : this.themeType === "dark"
               ? "深色模式"
-              : "跟随系统";
-        $message.info("当前主题为" + text, {
+              : "跟隨系統";
+        $message.info("當前主題為" + text, {
           duration: 1500,
         });
       }

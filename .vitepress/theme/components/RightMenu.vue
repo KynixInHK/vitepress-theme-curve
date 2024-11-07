@@ -18,16 +18,16 @@
           @contextmenu.stop="closeRightMenu"
         >
           <div class="tools">
-            <div class="btn" title="后退" @click="rightMenuFunc('back')">
+            <div class="btn" title="後退" @click="rightMenuFunc('back')">
               <i class="iconfont icon-left"></i>
             </div>
-            <div class="btn" title="前进" @click="rightMenuFunc('forward')">
+            <div class="btn" title="前進" @click="rightMenuFunc('forward')">
               <i class="iconfont icon-right"></i>
             </div>
-            <div class="btn" title="刷新" @click="rightMenuFunc('reload')">
+            <div class="btn" title="重新整理" @click="rightMenuFunc('reload')">
               <i class="iconfont icon-refresh"></i>
             </div>
-            <div class="btn" title="返回顶部" @click="smoothScrolling">
+            <div class="btn" title="回到頂部" @click="smoothScrolling">
               <i class="iconfont icon-arrow-up"></i>
             </div>
           </div>
@@ -38,7 +38,7 @@
               @click="router.go(shufflePost(theme.postData))"
             >
               <i class="iconfont icon-shuffle"></i>
-              <span class="name">随便逛逛</span>
+              <span class="name">隨機文章</span>
             </div>
             <div
               v-if="clickedType === 'normal'"
@@ -46,16 +46,16 @@
               @click="router.go('/pages/categories')"
             >
               <i class="iconfont icon-folder"></i>
-              <span class="name">全部分类</span>
+              <span class="name">全部分類</span>
             </div>
             <div v-if="clickedType === 'normal'" class="btn" @click="router.go('/pages/tags')">
               <i class="iconfont icon-hashtag"></i>
-              <span class="name">全部标签</span>
+              <span class="name">全部標籤</span>
             </div>
             <!-- 链接类型 -->
             <div v-if="clickedType === 'link'" class="btn" @click="rightMenuFunc('open-link')">
               <i class="iconfont icon-window"></i>
-              <span class="name">新标签页打开</span>
+              <span class="name">新標籤頁打開</span>
             </div>
             <div
               v-if="clickedType === 'link'"
@@ -65,7 +65,7 @@
               "
             >
               <i class="iconfont icon-link"></i>
-              <span class="name">复制链接地址</span>
+              <span class="name">拷貝鏈接位址</span>
             </div>
             <!-- 图片类型 -->
             <div
@@ -74,7 +74,7 @@
               @click="copyImage(clickedTypeData?.src)"
             >
               <i class="iconfont icon-image-copy"></i>
-              <span class="name">复制此图片</span>
+              <span class="name">拷貝此圖片</span>
             </div>
             <div
               v-if="clickedType === 'image'"
@@ -82,7 +82,7 @@
               @click="downloadImage(clickedTypeData?.src)"
             >
               <i class="iconfont icon-download"></i>
-              <span class="name">下载此图片</span>
+              <span class="name">下載此圖片</span>
             </div>
             <!-- 输入框 -->
             <div
@@ -91,7 +91,7 @@
               @click="rightMenuFunc('input-paste')"
             >
               <i class="iconfont icon-paste"></i>
-              <span class="name">粘贴文本</span>
+              <span class="name">貼上文字</span>
             </div>
             <!-- 选中文本 -->
             <a
@@ -100,8 +100,8 @@
               class="btn right-menu-link"
               target="_blank"
             >
-              <i class="iconfont icon-link"></i>
-              <span class="name">在新标签页打开</span>
+              <i class="iconfont icon-link-line"></i>
+              <span class="name">新標籤頁打開</span>
             </a>
             <a
               v-if="clickedType === 'text' || clickedType === 'input'"
@@ -109,8 +109,8 @@
               class="btn right-menu-link"
               target="_blank"
             >
-              <i class="iconfont icon-baidu"></i>
-              <span class="name">使用百度搜索</span>
+              <i class="iconfont icon-logo-google"></i>
+              <span class="name">Google 檢索</span>
             </a>
             <a
               v-if="clickedType === 'text' || clickedType === 'input'"
@@ -118,8 +118,8 @@
               class="btn right-menu-link"
               target="_blank"
             >
-              <i class="iconfont icon-bing"></i>
-              <span class="name">使用必应搜索</span>
+              <i class="iconfont icon-bing-line"></i>
+              <span class="name">Bing 檢索</span>
             </a>
             <div
               v-if="clickedType === 'text' || clickedType === 'input'"
@@ -127,15 +127,7 @@
               @click="copyText(clickedTypeData)"
             >
               <i class="iconfont icon-copy"></i>
-              <span class="name">复制选中文本</span>
-            </div>
-            <div
-              v-if="clickedType === 'text' && !commentCopyShow && theme.comment.type === 'artalk'"
-              class="btn"
-              @click="commentCopy(clickedTypeData)"
-            >
-              <i class="iconfont icon-chat"></i>
-              <span class="name">评论选中内容</span>
+              <span class="name">拷貝選中文字</span>
             </div>
           </div>
           <!-- 通用菜单 -->
@@ -143,19 +135,19 @@
             <!-- 版权协议 -->
             <div class="btn" @click="router.go('/pages/cc')">
               <i class="iconfont icon-accessible"></i>
-              <span class="name">版权协议</span>
+              <span class="name">版權協議</span>
             </div>
             <!-- 隐私政策 -->
             <div class="btn" @click="router.go('/pages/privacy')">
               <i class="iconfont icon-privacy"></i>
-              <span class="name">隐私政策</span>
+              <span class="name">隱私政策</span>
             </div>
           </div>
           <div class="all-menu general">
             <!-- 复制地址 -->
             <div class="btn" @click="rightMenuFunc('copy-link')">
               <i class="iconfont icon-copy"></i>
-              <span class="name">复制本页地址</span>
+              <span class="name">拷貝本頁位址</span>
             </div>
             <!-- 明暗模式 -->
             <div class="btn" @click.stop="store.changeThemeType">
@@ -164,13 +156,13 @@
               />
               <span class="name">
                 {{
-                  themeType === "auto" ? "深色模式" : themeType === "dark" ? "浅色模式" : "跟随系统"
+                  themeType === "auto" ? "深色模式" : themeType === "dark" ? "淺色模式" : "跟隨系統"
                 }}
               </span>
             </div>
           </div>
           <!-- 播放器控制 -->
-          <div v-if="playerShow" class="all-menu general player">
+          <!-- <div v-if="playerShow" class="all-menu general player">
             <div class="data">
               <span class="name">{{ playerData.name }}</span>
               <span class="artist">{{ playerData.artist }}</span>
@@ -200,7 +192,7 @@
                 <i class="iconfont icon-next"></i>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </Transition>

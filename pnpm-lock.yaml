@@ -38,6 +38,9 @@ importers:
       pinia-plugin-persistedstate:
         specifier: ^3.2.3
         version: 3.2.3(pinia@2.2.4(typescript@4.9.5)(vue@3.5.11(typescript@4.9.5)))
+      twikoo:
+        specifier: ^1.6.39
+        version: 1.6.39
       vue:
         specifier: ^3.5.11
         version: 3.5.11(typescript@4.9.5)
@@ -47,6 +50,9 @@ importers:
       vue-slider-component:
         specifier: 4.1.0-beta.7
         version: 4.1.0-beta.7
+      vue3-spinner:
+        specifier: ^0.0.17
+        version: 0.0.17(vue@3.5.11(typescript@4.9.5))
     devDependencies:
       cheerio:
         specifier: 1.0.0-rc.12
@@ -3630,6 +3636,9 @@ packages:
   tslib@2.7.0:
     resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
 
+  twikoo@1.6.39:
+    resolution: {integrity: sha512-gWM+gtZlHnlkGHL4ycQN1vLLuRxALwDrLVGcEOgkbKU3WX9qYf9zz/fFxbqCGvB/LTZLRuhLAc3EuwCtBI7VNQ==}
+
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -3902,6 +3911,11 @@ packages:
 
   vue-slider-component@4.1.0-beta.7:
     resolution: {integrity: sha512-Qb7K920ZG7PoQswoF6Ias+i3W2rd3k4fpk04JUl82kEUcN86Yg6et7bVSKWt/7VpQe8a5IT3BqCKSCOZ7AJgCA==}
+
+  vue3-spinner@0.0.17:
+    resolution: {integrity: sha512-iiOa1rRxMOFWmEExdPYwAgY+EavW21kPa0G3khS3vRVnDxVV2QPXHugBucZxpuyNijMZxR4mq+/ryNV7ziHK2Q==}
+    peerDependencies:
+      vue: ^3.2.41
 
   vue@3.5.11:
     resolution: {integrity: sha512-/8Wurrd9J3lb72FTQS7gRMNQD4nztTtKPmuDuPuhqXmmpD6+skVjAeahNpVzsuky6Sy9gy7wn8UadqPtt9SQIg==}
@@ -7996,6 +8010,8 @@ snapshots:
 
   tslib@2.7.0: {}
 
+  twikoo@1.6.39: {}
+
   type-check@0.4.0:
     dependencies:
       prelude-ls: 1.2.1
@@ -8320,6 +8336,10 @@ snapshots:
       '@vue/server-renderer': 3.5.11(vue@3.5.11(typescript@4.9.5))
 
   vue-slider-component@4.1.0-beta.7: {}
+
+  vue3-spinner@0.0.17(vue@3.5.11(typescript@4.9.5)):
+    dependencies:
+      vue: 3.5.11(typescript@4.9.5)
 
   vue@3.5.11(typescript@4.9.5):
     dependencies:

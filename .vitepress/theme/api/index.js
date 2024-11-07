@@ -3,8 +3,12 @@
  * @param {string} [rule="updated"] - 文章的排序规则，可以是 "created" 或 "updated"
  */
 export const getHitokoto = async () => {
-  const result = await fetch("https://v1.hitokoto.cn");
-  const hitokoto = await result.json();
+  const result = await fetch("https://dewvine.axiomatrix.org/?length=20");
+  const sentence = await(result.clone().json())
+  console.log(sentence[0])
+  const hitokoto = {
+    hitokoto: sentence[0].sentence
+  };
   return hitokoto;
 };
 
@@ -27,7 +31,7 @@ export const getSiteInfo = async (url) => {
     const doc = parser.parseFromString(text, "text/html");
     // 获取页面标题
     const titleElement = doc.querySelector("title");
-    details.title = titleElement ? titleElement.textContent : "暂无标题";
+    details.title = titleElement ? titleElement.textContent : "暫無標題";
     // 获取 icon
     let iconLink =
       doc.querySelector("link[rel='shortcut icon']") || doc.querySelector("link[rel='icon']");
@@ -70,13 +74,13 @@ export const getMusicList = async (url, id, server = "netease", type = "playlist
 export const getStatistics = async (key) => {
   const result = await fetch(`https://v6-widget.51.la/v6/${key}/quote.js`);
   const title = [
-    "最近活跃",
-    "今日人数",
-    "今日访问",
-    "昨日人数",
-    "昨日访问",
-    "本月访问",
-    "总访问量",
+    "最近活躍",
+    "今日人數",
+    "今日造訪",
+    "昨日人數",
+    "昨日造訪",
+    "本月造訪",
+    "造訪總量",
   ];
   const data = await result.text();
   let num = data.match(/(<\/span><span>).*?(\/span><\/p>)/g);

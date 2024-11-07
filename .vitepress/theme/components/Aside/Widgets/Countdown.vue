@@ -2,7 +2,7 @@
   <!-- 倒计时 -->
   <div class="count-down s-card">
     <div class="count-left">
-      <span class="text"> 距离 </span>
+      <span class="text"> 距離 </span>
       <span class="name">{{ theme.aside.countDown.data.name }}</span>
       <span class="time"> {{ getDaysUntil(theme.aside.countDown.data.date) }} </span>
       <span class="date">{{ theme.aside.countDown.data.date }}</span>
@@ -19,9 +19,9 @@
             {{ item.percentage }}%
           </span>
           <span :class="['remaining', { many: item.percentage >= 60 }]">
-            <span class="tip">还剩</span>
+            <span class="tip">餘下</span>
             {{ item.remaining }}
-            <span class="tip">{{ tag === "day" ? "小时" : "天" }}</span>
+            <span class="tip">{{ tag === "day" ? "小時" : "天" }}</span>
           </span>
         </div>
       </div>

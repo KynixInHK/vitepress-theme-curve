@@ -3,36 +3,22 @@
   <div class="site-data s-card">
     <div class="title">
       <i class="iconfont icon-chart"></i>
-      <span class="title-name">站点数据</span>
+      <span class="title-name">本站監控</span>
     </div>
     <div class="all-data">
       <div class="data-item">
         <span class="name">
           <i class="iconfont icon-article"></i>
-          文章总数
+          文章總數
         </span>
         <span class="num">{{ theme.postData?.length || 0 }} 篇</span>
       </div>
       <div class="data-item">
         <span class="name">
           <i class="iconfont icon-date"></i>
-          建站天数
+          建站天數
         </span>
         <span class="num">{{ daysFromNow(theme.since) }} 天</span>
-      </div>
-      <div class="data-item">
-        <span class="name">
-          <i class="iconfont icon-visibility"></i>
-          总访问量
-        </span>
-        <span class="num" id="busuanzi_value_site_pv">0</span>
-      </div>
-      <div class="data-item">
-        <span class="name">
-          <i class="iconfont icon-account"></i>
-          总访客数
-        </span>
-        <span class="num" id="busuanzi_value_site_uv">0</span>
       </div>
     </div>
   </div>

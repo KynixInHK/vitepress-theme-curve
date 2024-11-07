@@ -1,5 +1,5 @@
 ---
-title: 全部分类
+title: 全部分類
 aside: false
 ---
 

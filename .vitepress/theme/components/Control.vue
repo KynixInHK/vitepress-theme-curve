@@ -13,26 +13,19 @@
         <div class="control-content" @click.stop>
           <!-- 功能菜单 -->
           <div class="menu">
-            <div class="menu-item open" title="显示模式切换" @click.stop="store.changeThemeType">
+            <div class="menu-item open" title="顯示模式" @click.stop="store.changeThemeType">
               <i :class="`iconfont icon-${store.themeType}`"></i>
             </div>
             <div
               :class="['menu-item', { open: store.useRightMenu }]"
-              title="右键菜单开关"
+              title="右鍵選單開關"
               @click.stop="rightMenuSwitch"
             >
               <i class="iconfont icon-list"></i>
             </div>
             <div
-              :class="['menu-item', { open: store.playerShow }]"
-              title="播放器开关"
-              @click.stop="store.playerShow = !store.playerShow"
-            >
-              <i class="iconfont icon-music"></i>
-            </div>
-            <div
               :class="['menu-item', { open: store.backgroundBlur }]"
-              title="背景模糊开关"
+              title="高斯模糊開關"
               @click.stop="store.changeShowStatus('backgroundBlur')"
             >
               <i class="iconfont icon-blur"></i>
@@ -67,7 +60,7 @@ const changeCloseStyle = () => {
 // 右键菜单开关
 const rightMenuSwitch = () => {
   store.useRightMenu = !store.useRightMenu;
-  $message.info(`${store.useRightMenu ? "已开启" : "已关闭"}自定义右键菜单`);
+  $message.info(`${store.useRightMenu ? "已開啟" : "已關閉"}客製化右鍵選單`);
 };
 </script>
 

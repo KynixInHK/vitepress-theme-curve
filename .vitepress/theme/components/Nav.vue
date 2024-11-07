@@ -4,7 +4,7 @@
       <div class="nav-all">
         <!-- 导航栏左侧 -->
         <div class="left-nav">
-          <div class="more-menu nav-btn" title="更多内容">
+          <div class="more-menu nav-btn" title="更多內容">
             <i class="iconfont icon-menu" />
             <div class="more-card s-card">
               <div v-for="(item, index) in theme.navMore" :key="index" class="more-item">
@@ -52,18 +52,10 @@
         </div>
         <div class="right-nav">
           <!-- 开往 -->
-          <a
-            class="menu-btn nav-btn travellings"
-            title="开往-友链接力"
-            href="https://www.travellings.cn/go.html"
-            target="_blank"
-          >
-            <i class="iconfont icon-subway"></i>
-          </a>
           <!-- 随机文章 -->
           <div
             class="menu-btn nav-btn"
-            title="随机前往一篇文章"
+            title="隨機前往一篇文章"
             @click="router.go(shufflePost(theme.postData))"
           >
             <i class="iconfont icon-shuffle"></i>
@@ -81,7 +73,7 @@
           <div
             id="open-control"
             class="menu-btn nav-btn pc"
-            title="打开中控台"
+            title="打開中控台"
             @click="store.changeShowStatus('controlShow')"
           >
             <i class="iconfont icon-dashboard" />
@@ -93,13 +85,13 @@
               'menu-btn',
               { hidden: scrollData.height === 0, long: scrollData.percentage > 90 },
             ]"
-            title="返回顶部"
+            title="回到頂部"
             @click="smoothScrolling"
           >
             <div class="to-top-btn">
               <Transition name="fade" mode="out-in">
                 <span :key="scrollData.percentage > 90" class="num">
-                  {{ scrollData.percentage <= 90 ? scrollData.percentage : "返回顶部" }}
+                  {{ scrollData.percentage <= 90 ? scrollData.percentage : "回到頂部" }}
                 </span>
               </Transition>
               <i class="iconfont icon-up"></i>
@@ -108,7 +100,7 @@
           <!-- 移动端菜单 -->
           <div
             class="menu-btn nav-btn mobile"
-            title="打开菜单"
+            title="打開菜單"
             @click="store.changeShowStatus('mobileMenuShow')"
           >
             <i class="iconfont icon-toc" />
@@ -476,7 +468,7 @@ const { site, theme, frontmatter, page } = useData();
           opacity 0.3s;
         cursor: pointer;
         &::after {
-          content: "返回顶部";
+          content: "回到頂部";
           position: absolute;
           top: 0;
           left: 0;

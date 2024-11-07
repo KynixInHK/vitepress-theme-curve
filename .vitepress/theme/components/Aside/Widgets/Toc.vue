@@ -3,7 +3,7 @@
   <div v-if="tocData && tocData?.length" class="toc s-card">
     <div class="toc-title">
       <i class="iconfont icon-toc" />
-      <span class="name">目录</span>
+      <span class="name">目錄</span>
     </div>
     <div id="toc-all" class="toc-list" :style="{ '--height': activeTocHeight + 'px' }">
       <span
@@ -46,7 +46,7 @@ const getAllTitle = () => {
     );
     return headers;
   } catch (error) {
-    console.error("获取所有目录数据出错：", error);
+    console.error("獲取所有目錄數據出錯：", error);
   }
 };
 
@@ -101,7 +101,7 @@ const scrollToHeader = (id) => {
     const scrollHeight = headerTop + postDom.value.offsetTop - 80;
     window.scroll({ top: scrollHeight, behavior: "smooth" });
   } catch (error) {
-    console.error("目录滚动失败：", error);
+    console.error("目錄滾動失敗：", error);
   }
 };
 
@@ -110,7 +110,7 @@ watch(
   () => store.scrollData.percentage,
   (val) => {
     if (val === 0 && tocData.value) {
-      console.log("回到顶部");
+      console.log("回到頂部");
       // 所有标题
       const headers = getAllTitle();
       if (!headers) return false;

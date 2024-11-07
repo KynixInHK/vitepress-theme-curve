@@ -3,7 +3,7 @@
 
 // 全局颜色变量
 :root {
-  --main-color: #425aef;
+  --main-color: #60c7ff;
   --main-color-bg: #4259ef0d;
   --main-site-background: #f7f9fe;
   --main-card-background: #fff;
@@ -36,7 +36,8 @@
 }
 
 html.dark {
-  --main-color: #dfac46;
+  // --main-color: #dfac46;
+  --main-color: #6d66ff;
   --main-color-bg: #f2b94b23;
   --main-site-background: #18171d;
   --main-card-background: #1b1c20;
@@ -65,6 +66,44 @@ html {
   }
   button {
     font-family: var(--main-font-family);
+  }
+  .banner {
+    align-items: center;
+    .subtitle {
+      margin-left: 0 !important;
+      width: 100% !important;
+      .text {
+        text-align: center !important;
+      }
+    }
+    .title {
+      text-align: center;
+      line-height: 150%;
+    }
+  }
+
+  .about {
+    .about-content {
+      .about-item.pursuit {
+        .title2 {
+          line-height: 1.5 !important;
+        }
+      }
+      .about-item.character {
+        .more {
+          max-width: 60% !important;
+        }
+      }
+      .about-item {
+        .title2 {
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+
+  .main-header .nav-all .nav-center .site-menu .menu-item .link-child .link-child-btn i {
+    margin-bottom: 0.1rem;
   }
 }
 
@@ -97,6 +136,16 @@ html {
           display: none;
         }
       }
+    }
+  }
+
+  .more-menu i {
+    margin-bottom: 0.2rem;
+  }
+
+  .menu-btn {
+    i {
+      margin-bottom: 0.2rem;
     }
   }
 }

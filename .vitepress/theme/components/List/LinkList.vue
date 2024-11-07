@@ -4,10 +4,10 @@
       <div v-for="(type, index) in listData" :key="index" class="link-type-list">
         <div class="title">
           <h2 class="name">
-            <span class="name-text">{{ type?.typeName || "未知分组" }}</span>
+            <span class="name-text">{{ type?.typeName || "未知分組" }}</span>
             <span v-if="showCount" class="name-count">（{{ type?.typeList?.length || 0 }}）</span>
           </h2>
-          <span class="tip">{{ type?.typeDesc || "分组暂无简介" }}</span>
+          <span class="tip">{{ type?.typeDesc || "分組暫無簡介" }}</span>
         </div>
         <div class="all-link" v-if="type?.typeList">
           <a
@@ -42,7 +42,7 @@
         </div>
       </div>
     </div>
-    <div v-else class="no-data">暂无友链数据</div>
+    <div v-else class="no-data">暫無友鏈資料</div>
   </Transition>
 </template>
 

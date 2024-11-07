@@ -17,7 +17,7 @@
           <!-- 置顶 -->
           <span v-if="item?.top" class="top">
             <i class="iconfont icon-align-top" />
-            置顶
+            釘住
           </span>
         </div>
         <span class="post-title">{{ item.title }}</span>

@@ -2,8 +2,9 @@
   <Teleport to="body">
     <Transition name="fade" mode="out-in">
       <div v-if="loadingStatus" class="loading" @click="loadingStatus = false">
-        <img :src="theme.siteMeta.logo" class="logo" alt="loading-logo" />
-        <span :class="['tip', { show: showTip }]"> 一直显示？点击任意区域即可关闭 </span>
+        <!-- <img :src="theme.siteMeta.logo" class="logo" alt="loading-logo" /> -->
+        <GridLoader color="grey"/>
+        <span :class="['tip', { show: showTip }]"> 一直顯示？Click 任意區間即可關閉。 </span>
       </div>
     </Transition>
   </Teleport>
@@ -12,6 +13,7 @@
 <script setup>
 import { storeToRefs } from "pinia";
 import { mainStore } from "@/store";
+import { GridLoader } from "vue3-spinner";
 
 const store = mainStore();
 const { theme } = useData();

@@ -70,7 +70,7 @@ const copyTip = () => {
   const copiedText = window.getSelection().toString();
   // 检查文本内容是否不为空
   if (copiedText.trim().length > 0 && typeof $message !== "undefined") {
-    $message.success("复制成功，在转载时请标注本文地址");
+    $message.success("拷貝成功，轉載時請註明");
   }
 };
 
@@ -84,7 +84,7 @@ const changeSiteThemeType = () => {
   };
   // 必要数据
   const htmlElement = document.documentElement;
-  console.log("当前模式：", themeType.value);
+  console.log("當前模式：", themeType.value);
   // 清除所有 class
   Object.values(themeClasses).forEach((themeClass) => {
     htmlElement.classList.remove(themeClass);
@@ -115,7 +115,7 @@ const changeSiteFont = () => {
     htmlElement.classList.add(fontFamily.value);
     htmlElement.style.fontSize = fontSize.value + "px";
   } catch (error) {
-    console.error("切换系统字体样式失败", error);
+    console.error("切換系統字體樣式失敗", error);
   }
 };
 

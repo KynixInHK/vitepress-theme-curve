@@ -3,7 +3,7 @@
   <div v-if="references" class="references s-card">
     <div class="title">
       <i class="iconfont icon-quote"></i>
-      <span class="title-text">参考资料</span>
+      <span class="title-text">參考資料</span>
     </div>
     <ul class="list">
       <a

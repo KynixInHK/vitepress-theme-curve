@@ -1,10 +1,10 @@
 <template>
   <div v-if="type === 'text'" :class="['banner', bannerType]" id="main-banner">
-    <h1 class="title">你好，欢迎来到{{ theme.siteMeta.title }}</h1>
+    <h1 class="title">你好，歡迎來到{{ theme.siteMeta.title }}</h1>
     <div class="subtitle">
       <Transition name="fade" mode="out-in">
         <span :key="hitokotoData?.hitokoto" class="text">
-          {{ hitokotoData?.hitokoto ? hitokotoData?.hitokoto : theme.siteMeta.description }}
+          {{ hitokotoData?.hitokoto ? hitokotoData?.hitokoto : "蔓露·加載中..." }}
         </span>
       </Transition>
     </div>
@@ -89,11 +89,11 @@ const bannerType = ref(null);
 const getHitokotoData = async () => {
   try {
     const result = await getHitokoto();
-    const { hitokoto, from, from_who } = result;
-    hitokotoData.value = { hitokoto, from, from_who };
+    const { hitokoto } = result;
+    hitokotoData.value = { hitokoto };
   } catch (error) {
-    $message.error("一言获取失败");
-    console.error("一言获取失败：", error);
+    $message.error("蔓露加載失敗");
+    console.error("蔓露加載失敗：", error);
   }
 };
 

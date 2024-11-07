@@ -4,7 +4,7 @@
     <div v-if="showBar" class="footer-bar">
       <span class="site-title">{{ site.title }}</span>
       <span class="site-desc">{{ site.description }}</span>
-      <a href="/" class="to-home">了解更多</a>
+      <a href="/" class="to-home">瞭解更多</a>
     </div>
     <div class="footer-social">
       <a
@@ -16,9 +16,6 @@
       >
         <i :class="`iconfont icon-${item.icon}`"></i>
       </a>
-      <div class="logo" title="返回顶部" @click="smoothScrolling">
-        <img :src="siteMeta.author.cover" alt="author" class="author" />
-      </div>
       <a
         v-for="(item, index) in socialLinkData.second"
         :key="index"
@@ -147,6 +144,9 @@ const socialLinkData = computed(() => {
       &:hover {
         transform: scale(1.15);
         background-color: var(--main-color);
+        .iconfont {
+          color: white;
+        }
       }
       &:active {
         transform: scale(1);

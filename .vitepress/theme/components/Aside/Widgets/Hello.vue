@@ -4,7 +4,10 @@
     <span class="tip" @click="changeHello">{{ helloText }}</span>
     <div class="content">
       <div class="site-logo">
-        <Clock />
+        <!-- <Clock /> -->
+        <LazyLoader>
+          <img src="/images/imgs/Designer.jpeg" class="avatar"/>
+        </LazyLoader>
       </div>
       <span class="site-desc" v-html="theme.aside.hello.text" />
     </div>
@@ -14,10 +17,10 @@
         <span class="desc">{{ theme.siteMeta.description }}</span>
       </div>
       <div class="link">
-        <a href="https://github.com/imsyy/" target="_blank" class="social-link">
+        <a href="https://github.com/KynixInHK/" target="_blank" class="social-link">
           <i class="iconfont icon-github"></i>
         </a>
-        <a href="mailto:one@imsyy.top" target="_blank" class="social-link">
+        <a href="mailto:kynix@kynix.tw" target="_blank" class="social-link">
           <i class="iconfont icon-email"></i>
         </a>
       </div>
@@ -47,13 +50,13 @@ const changeHello = () => {
   clearTimeout(helloTimeOut.value);
   helloClick.value++;
   if (helloClick.value === 1) {
-    helloText.value = "点这里干什么？";
+    helloText.value = "點按這裡做什麼？";
   } else if (helloClick.value === 2) {
-    helloText.value = "怎么还点？";
+    helloText.value = "上癮了？";
   } else if (helloClick.value === 3) {
-    helloText.value = "那你点吧！";
+    helloText.value = "算了隨你啦！";
   } else if (helloClick.value === 100) {
-    helloText.value = "怎么还在点？？？";
+    helloText.value = "求你別按了⋯⋯";
   } else {
     helloText.value = `x ${helloClick.value - 3}`;
   }
@@ -70,7 +73,7 @@ const isHasUser = () => {
   if (!userData) return false;
   // 获取用户数据
   const { nick } = JSON.parse(userData);
-  const hello = ["很高兴见到你", "好久不见", "欢迎回来"];
+  const hello = ["很高興見到你", "好久不見", "歡迎回來"];
   // 随机问候语
   helloText.value = hello[Math.floor(Math.random() * hello.length)] + "，" + nick;
   return true;
@@ -91,8 +94,13 @@ onBeforeUnmount(() => {
   flex-direction: column;
   align-items: center;
   background-color: var(--main-color);
-  color: var(--main-card-background);
+  color: #fff;
   border: none;
+  .avatar {
+    width: 100%;
+    border-radius: 100%;
+  }
+
   .tip {
     display: inline-block;
     min-width: 140px;
@@ -176,7 +184,7 @@ onBeforeUnmount(() => {
         border-radius: 50%;
         .iconfont {
           font-size: 22px;
-          color: var(--main-card-background);
+          color: #fff;
         }
         &:first-child {
           margin-left: 0;

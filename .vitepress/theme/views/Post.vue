@@ -78,15 +78,15 @@
             </a>
           </div>
           <a
-            href="https://eqnxweimkr5.feishu.cn/share/base/form/shrcnCXCPmxCKKJYI3RKUfefJre"
+            href="mailto:kynix@kynix.tw"
             class="report"
             target="_blank"
           >
             <i class="iconfont icon-report" />
-            反馈与投诉
+            反饋與投訴
           </a>
         </div>
-        <RewardBtn />
+        <!-- <RewardBtn /> -->
         <!-- 下一篇 -->
         <NextPost />
         <!-- 相关文章 -->

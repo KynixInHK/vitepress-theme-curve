@@ -3,43 +3,43 @@ const linkData = [
   // 推荐数据
   {
     type: "rec",
-    typeName: "推荐",
-    typeDesc: "都是大佬，推荐关注",
+    typeName: "推薦",
+    typeDesc: "大神圈，推薦追蹤",
     typeList: [
       {
-        name: "阮一峰",
-        avatar: "https://pic.efefee.cn/uploads/2024/02/26/65dc5fb729cdb.webp",
-        desc: "阮老师，知名博主，大佬中的大佬",
+        name: "阮一峯",
+        avatar: "https://pictures.axiomatrix.org/blog-config/ruan-yi-feng.ico",
+        desc: "阮老師，知名閣主，大神中的大神",
         url: "https://www.ruanyifeng.com/blog/",
       },
       {
-        name: "张洪 Heo",
-        avatar: "https://pic.efefee.cn/uploads/2024/02/26/65dc5304b211c.webp",
-        desc: "产品设计师，独立开发者，设计与科技分享",
+        name: "張洪 Heo",
+        avatar: "https://pictures.axiomatrix.org/blog-config/144.webp",
+        desc: "產品設計師，獨立開發者，設計與科技分享",
         url: "https://blog.zhheo.com/",
       },
       {
-        name: "杜老师说",
-        avatar: "https://pic.efefee.cn/uploads/2024/02/28/65de92770fb66.webp",
-        desc: "高级网络工程师，网站技术运营总监，系统运维、架构设计以及优化专家",
+        name: "杜老師說",
+        avatar: "https://pictures.axiomatrix.org/blog-config/du-lao-shi-shuo.ico",
+        desc: "資深網路工程師，網站技術營運總監，系統維運、架構設計以及最佳化專家",
         url: "https://dusays.com/",
       },
       {
         name: "XAOXUU",
-        avatar: "https://pic.efefee.cn/uploads/2024/02/29/65dfe0f7a945b.webp",
-        desc: "Hexo Stellar、Volantis 主题作者",
+        avatar: "https://pictures.axiomatrix.org/blog-config/XAOUU.ico",
+        desc: "Hexo Stellar、Volantis 主題作者",
         url: "https://xaoxuu.com/",
       },
       {
-        name: "风记星辰",
-        avatar: "https://pic.efefee.cn/uploads/2024/02/29/65dfe827e319c.webp",
-        desc: "有着非常优秀的设计与交互的博客",
+        name: "風記星辰",
+        avatar: "https://pictures.axiomatrix.org/blog-config/feng-ji-xing-chen.png!webp",
+        desc: "非常優秀設計與交互的部落格",
         url: "https://www.thyuu.com/",
       },
       {
         name: "DIYgod",
-        avatar: "https://pic.efefee.cn/uploads/2024/03/14/65f2c2bb8c17c.gif",
-        desc: "写代码是热爱，写到世界充满爱！",
+        avatar: "https://pictures.axiomatrix.org/blog-config/diygod.png",
+        desc: "寫代碼是熱愛，寫到世界充滿愛！",
         url: "https://diygod.cc/",
       },
     ],
@@ -47,15 +47,33 @@ const linkData = [
   // 小伙伴们
   {
     type: "friends",
-    typeName: "小伙伴们",
-    typeDesc: "我们在一起，共同进步",
+    typeName: "小夥伴們",
+    typeDesc: "我們在一起，共同進步！",
     typeList: [
       {
-        name: "無名小栈",
-        avatar: "https://pic.efefee.cn/uploads/2024/02/02/65bc526a940e3.png",
-        desc: "分享技术与科技生活",
-        url: "https://blog.imsyy.top/",
+        name: "lnkkerst's blog",
+        avatar: "https://pictures.axiomatrix.org/blog-config/avatar.ea63a92b.jpg",
+        desc: "WLY 大神",
+        url: "https://blog.lnkkerst.me/",
       },
+      {
+        name: "SZW0407's website",
+        avatar: "https://pictures.axiomatrix.org/blog-config/107471539.png",
+        desc: "好兄弟子文同學",
+        url: "https://szw0407.github.io/"
+      },
+      {
+        name: "蘭斯小窩",
+        avatar: "https://pictures.axiomatrix.org/blog-config/avatar.png",
+        desc: "蛇蛇同學",
+        url: "https://lancelotshire.me/"
+      },
+      {
+        name: "洛七的摸魚池塘",
+        avatar: "https://pictures.axiomatrix.org/blog-config/luoqi.jpg",
+        desc: "洛七學長，大神級人物",
+        url: "https://lu0key.github.io/"
+      }
     ],
   },
 ];

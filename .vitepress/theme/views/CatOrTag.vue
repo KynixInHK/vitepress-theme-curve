@@ -2,12 +2,12 @@
 <template>
   <div class="cat-or-tag">
     <div class="title">
-      <h1 class="title-name">{{ type === "categories" ? "全部分类" : "全部标签" }}</h1>
+      <h1 class="title-name">{{ type === "categories" ? "全部分類" : "全部標籤" }}</h1>
       <span v-if="type === 'categories'" class="title-num">
-        共有 {{ Object.keys(theme.categoriesData)?.length || 0 }} 个分类
+        共有 {{ Object.keys(theme.categoriesData)?.length || 0 }} 個分類
       </span>
       <span v-else class="title-num">
-        共有 {{ Object.keys(theme.tagsData)?.length || 0 }} 个标签
+        共有 {{ Object.keys(theme.tagsData)?.length || 0 }} 個標籤
       </span>
     </div>
     <div v-if="type === 'categories'" class="type-lists">

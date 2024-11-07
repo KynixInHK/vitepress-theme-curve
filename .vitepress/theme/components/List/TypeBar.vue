@@ -9,7 +9,7 @@
       >
         {{ currentTypeName }}
       </a>
-      <a href="/" :class="['type-item', { choose: !currentTypeName }]">首页</a>
+      <a href="/" :class="['type-item', { choose: !currentTypeName }]">首頁</a>
       <a
         v-for="(_, key, index) in theme.categoriesData"
         :key="index"
