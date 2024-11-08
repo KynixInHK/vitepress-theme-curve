@@ -3,7 +3,7 @@
     <Transition name="fade" mode="out-in">
       <div v-if="loadingStatus" class="loading" @click="loadingStatus = false">
         <!-- <img :src="theme.siteMeta.logo" class="logo" alt="loading-logo" /> -->
-        <GridLoader color="grey"/>
+        <VueSpinnerGrid color="grey" size="50"/>
         <span :class="['tip', { show: showTip }]"> 一直顯示？Click 任意區間即可關閉。 </span>
       </div>
     </Transition>
@@ -13,7 +13,7 @@
 <script setup>
 import { storeToRefs } from "pinia";
 import { mainStore } from "@/store";
-import { GridLoader } from "vue3-spinner";
+import { VueSpinnerGrid } from "vue3-spinners";
 
 const store = mainStore();
 const { theme } = useData();
