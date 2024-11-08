@@ -138,7 +138,7 @@
         <div class="about-item info">
           <div class="info-item">
             <span class="info-name">生於</span>
-            <span class="info-num" style="--color: #43a6c6">民國91年</span>
+            <span class="info-num" style="--color: #43a6c6">2002</span>
           </div>
           <div class="info-item">
             <span class="info-name">現職業</span>
