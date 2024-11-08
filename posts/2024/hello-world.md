@@ -9,7 +9,7 @@ top: true
 ---
 
 ## 恭喜陳叔叔的部落格喬遷新居！
-自西曆 2024年11月08日起，“陳叔叔的部落格”正式遷移至本站，網域仍為https://blog.kynix.tw/。
+自西曆 2024年11月08日起，“陳叔叔的部落格”正式遷移至本站，網域仍為https://blog.kynix.tw/ 。
 
 新站基於 <a href="https://vitepress.dev/">VitePress</a> 建置，由 <a href="https://vercel.com/">Vercel</a> 提供構建服務。同時，新站還使用 <a href="https://twikoo.js.org/">Twikoo</a> 搭建煥然一新的評論系統。總之，相信新站將會為你帶來不一樣的體驗。
 
