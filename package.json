@@ -21,6 +21,7 @@
     "dev": "vitepress dev --host",
     "build": "vitepress build",
     "preview": "vitepress preview",
+    "new": "./scripts/new_post.fish",
     "deploy:vercel": "vercel deploy"
   },
   "devDependencies": {
